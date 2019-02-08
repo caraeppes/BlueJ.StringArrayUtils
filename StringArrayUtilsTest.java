@@ -216,12 +216,6 @@ public class StringArrayUtilsTest {
 
 
 
-
-
-
-
-
-
     @Test
     public void testIsPalindromic1() {
         String[] array = {"a", "b", "c", "b", "a"};
