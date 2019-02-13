@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Created by leon on 1/29/18.
  */
@@ -84,22 +84,17 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        String bigString = "";
-        
-        for(String s : array){
-            bigString = bigString + s.toLowerCase();
-        }
-        
-        String[] charString = bigString.split("");
-        
-        for (Character c = 'a'; c < 'z'; c++){
-            if(!contains(charString, c.toString())){
-                return false;
-            }
-        }
-        return true;
-    }
-
+     
+       String[] characterStrings = Arrays.toString(array).toLowerCase().split("");
+       
+       for (Character c = 'a'; c < 'z'; c++){
+           if(!contains(characterStrings, c.toString())){
+               return false;
+           }
+       }
+       return true;
+   }
+   
     /**
      * @param array array of String objects
      * @param value value to check array for
